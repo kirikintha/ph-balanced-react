@@ -1,0 +1,35 @@
+/*
+  http://astronautweb.co/snippet/font-awesome/
+*/
+@import '_variables';
+@import '_animation';
+@import '_parallax';
+@import url( 'https://fonts.googleapis.com/css?family=Arsenal:400,700,400i,700i');
+@import '~font-awesome/scss/font-awesome';
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $arsenal;
+  color      : $phbalanced-black;
+  height     : 100%;
+}
+
+a {
+  color : $phbalanced-black;
+  cursor: pointer;
+}
+
+.btn,
+.btn:focus {
+  cursor    : pointer;
+  box-shadow: none;
+}
+
+.btn,
+.card {
+  border-radius: 0;
+}

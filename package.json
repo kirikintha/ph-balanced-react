@@ -1,0 +1,93 @@
+{
+  "name": "ph-balanced",
+  "version": "1.0.0",
+  "description": "A website based on React.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "font-awesome": "^4.7.0",
+    "neutrino": "^5.6.0",
+    "neutrino-preset-airbnb-base": "^5.6.0",
+    "neutrino-preset-react": "^5.6.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-router-dom": "^4.1.1",
+    "react-transition-group": "^1.1.2",
+    "reactstrap": "^4.5.0"
+  },
+  "neutrino": {
+    "use": [
+      "neutrino-preset-airbnb-base",
+      "neutrino-preset-react",
+      "./neutrino-middleware/extract-text-middleware.js",
+      "./neutrino-middleware/copy-middleware.js",
+      "./neutrino-middleware/airbnb-middleware.js"
+    ],
+    "options": {
+      "compile": {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "not ie <= 10"
+          ]
+        }
+      },
+      "html": {
+        "template": "./src/index.html5.ejs",
+        "appMountId": "root",
+        "title": "PH-Balanced [Simple design, for a more simple life]",
+        "favicon": "./src/favicon.ico",
+        "xhtml": true,
+        "mobile": false,
+        "minify": {
+          "useShortDoctype": true,
+          "keepClosingSlash": true,
+          "collapseWhitespace": true,
+          "preserveLineBreaks": true
+        },
+        "scripts": [
+          "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-536adc3809b7ff25"
+        ]
+      }
+    },
+    "config": {
+      "devServer": {
+        "port": 8080
+      },
+      "entry": {
+        "vendor": [
+          "react",
+          "react-dom"
+        ]
+      },
+      "module": {
+        "rule": {
+          "style": {
+            "test": "\\.scss$",
+            "use": [{
+              "loader": "sass-loader"
+            }]
+          }
+        }
+      }
+    }
+  }
+}
