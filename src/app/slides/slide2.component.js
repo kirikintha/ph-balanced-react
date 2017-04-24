@@ -45,7 +45,7 @@ class Slide1 extends React.Component {
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item">AWS Web Services (EC2 &amp; S3)</li>
                     <li className="list-group-item">Nginx and NodeJS</li>
-                    <li className="list-group-item">Angular 2 and Bootstrap 4 (Typescript &amp; Sass)</li>
+                    <li className="list-group-item">React 15 and Bootstrap 4 (Typescript &amp; Sass)</li>
                     <li className="list-group-item">Imagemagick and Homebrew</li>
                   </ul>
                 </div>
